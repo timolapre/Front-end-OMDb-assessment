@@ -19,12 +19,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: npm-${{ hashFiles('package-lock.json') }}
-          restore-keys: npm-
+      #- name: Cache dependencies
+      #  uses: actions/cache@v2
+      #  with:
+      #    path: ~/.npm
+      #    key: npm-${{ hashFiles('package-lock.json') }}
+      #    restore-keys: npm-
         
       - name: print sercret
         run: echo ${{ secrets.SECRET }}

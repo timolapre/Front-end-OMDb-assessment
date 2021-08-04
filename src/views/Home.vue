@@ -27,6 +27,7 @@
         </div>
       </div>
     </div>
+    <img :src="require('@/assets/logo.png')" alt="">
   </div>
 </template>
 
@@ -35,6 +36,7 @@ import axios from "axios";
 
 import Header from "../components/layout/Header";
 import movieComponent from "../components/movieComponent";
+
 
 export default {
   name: "Home",

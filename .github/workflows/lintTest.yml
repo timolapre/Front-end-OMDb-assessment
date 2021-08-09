@@ -27,9 +27,10 @@ jobs:
       #    restore-keys: npm-
        
       - name: Install dependencies
-        run: npm config set '//registry.npmjs.org/:_authToken' ${{ secrets.SECRET }} && npm ci --ignore-scripts
+        #run: npm config set '//registry.npmjs.org/:_authToken' ${{ secrets.SECRET }} && npm ci --ignore-scripts
+        run: npm ci --ignore-scripts
         env:
-          NPM_AUTH_TOKEN: ${{ secrets.SECRET }}
+          NPM_AUTH_TOKEN: ${{secrets.SECRET}}
         
       - name: Run linter
         run: npm run lint

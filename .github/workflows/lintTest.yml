@@ -28,7 +28,7 @@ jobs:
        
       - name: Install dependencies
         #run: npm config set '//registry.npmjs.org/:_authToken' ${{ secrets.SECRET }} && npm ci --ignore-scripts
-        run: npm ci --ignore-scripts
+        run: npm config set '//registry.npmjs.org/:_authToken' "${SECRET}" && npm ci --ignore-scripts
         env:
           SECRET: ${{ secrets.SECRET }}
         

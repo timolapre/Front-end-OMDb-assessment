@@ -1,0 +1,3 @@
+@myregistry:registry=registry.npmjs.org
+//registry.npmjs.org/:_authToken=${SECRET}
+#always-auth=true
